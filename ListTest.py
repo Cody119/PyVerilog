@@ -1,4 +1,4 @@
-from numba import njit, double, typeof, deferred_type
+from numba import njit, double, typeof, deferred_type, uint64
 from numba.experimental import jitclass
 from numba.typed import List
 
@@ -10,7 +10,7 @@ def addOne(x):
 def addTwo(x):
     return x + 2.0
 
-MyFun = double(double).as_type();
+MyFun = double(double).as_type()
 MyList = typeof(List.empty_list(MyFun))
 print(MyList)
 
